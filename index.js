@@ -180,6 +180,9 @@ const skills = [
 
 const skillsContainer = document.querySelector('.skills-grid');
 
+// Clear existing content to avoid duplication
+skillsContainer.innerHTML = '';
+
 skills.forEach(skill => {
   const skillItem = document.createElement('div');
   skillItem.classList.add('skill-item');
