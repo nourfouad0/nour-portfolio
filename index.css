@@ -239,6 +239,21 @@ h2 {
   margin: 8px 0; /* Reduced margin */
 }
 
+/* Progress bars for skills */
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: var(--background-color);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--primary-color);
+  transition: width 1s ease-in-out; /* Smooth animation */
+}
+
 /* Education & Courses */
 .education-item, .course-item {
   background-color: var(--card-background);
@@ -362,17 +377,66 @@ button[aria-label="Scroll to top"] {
   z-index: 1000;
 }
 
-/* Progress bars for skills */
-.progress-bar {
-  width: 100%;
-  height: 10px;
-  background-color: var(--background-color);
-  border-radius: 5px;
-  overflow: hidden;
-}
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  /* Navigation Bar */
+  #navbar .nav-links {
+    display: none; /* Hide nav links on mobile */
+    flex-direction: column;
+    background-color: var(--card-background);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
 
-.progress-fill {
-  height: 100%;
-  background-color: var(--primary-color);
-  transition: width 1s ease-in-out; /* Smooth animation */
-}
+  #navbar .nav-links.active {
+    display: flex; /* Show nav links when mobile menu is active */
+  }
+
+  #mobile-menu {
+    display: flex; /* Show mobile menu toggle */
+  }
+
+  /* Hero Section */
+  #hero h1 {
+    font-size: 2rem; /* Smaller font for mobile */
+  }
+
+  #hero h2 {
+    font-size: 1.5rem; /* Smaller font for mobile */
+  }
+
+  #hero p {
+    font-size: 1rem; /* Smaller font for mobile */
+  }
+
+  /* Sections */
+  section {
+    padding: 15px 0; /* Reduced padding for mobile */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Smaller font for mobile */
+  }
+
+  /* Experience Grid */
+  .experience-grid {
+    grid-template-columns: 1fr; /* Single column for mobile */
+  }
+
+  /* Project Grid */
+  .project-grid {
+    grid-template-columns: 1fr; /* Single column for mobile */
+  }
+
+  /* Skills Grid */
+  .skills-grid {
+    grid-template-columns: 1fr; /* Single column for mobile */
+  }
+
+  /* Contact Info */
+  .contact-info p {
+    font-size: 0.9rem; /* Smaller font for mobile */
+  }
