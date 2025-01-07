@@ -6,6 +6,8 @@ body {
   box-sizing: border-box;
   line-height: 1.6;
   color: #333;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -31,10 +33,48 @@ ul {
   margin: 0;
 }
 
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+body.dark-mode #navbar {
+  background-color: #333;
+}
+
+body.dark-mode .experience-item,
+body.dark-mode .project-item,
+body.dark-mode .skill-item,
+body.dark-mode .education-item,
+body.dark-mode .course-item {
+  background-color: #2d2d2d;
+  color: #f0f0f0;
+}
+
+body.dark-mode .experience-item h4,
+body.dark-mode .project-item p,
+body.dark-mode .skill-item p,
+body.dark-mode .education-item h4,
+body.dark-mode .education-item p,
+body.dark-mode .course-item p {
+  color: #ccc;
+}
+
+body.dark-mode .btn {
+  background-color: #7c4dff; /* Violet */
+  color: #fff;
+}
+
+body.dark-mode .btn:hover {
+  background-color: #651fff; /* Darker Violet */
+}
+
 /* Navigation Bar */
 #navbar {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -44,13 +84,11 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
 }
 
 #navbar .logo {
   font-size: 1.5rem;
-  font-weight: 600;
-  color: #333;
+  font-weight: bold;
 }
 
 #navbar .nav-links {
@@ -59,13 +97,12 @@ ul {
 }
 
 #navbar .nav-links li a {
-  font-size: 1rem;
-  color: #333;
+  color: #fff;
   transition: color 0.3s ease;
 }
 
 #navbar .nav-links li a:hover {
-  color: #007bff;
+  color: #7c4dff; /* Violet */
 }
 
 /* Mobile Menu */
@@ -78,7 +115,7 @@ ul {
 .menu-toggle .bar {
   width: 25px;
   height: 3px;
-  background-color: #333;
+  background-color: #fff;
   margin: 4px 0;
 }
 
@@ -91,7 +128,7 @@ ul {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: #f9f9f9;
+    background-color: #333;
     position: absolute;
     top: 60px;
     left: 0;
@@ -110,7 +147,7 @@ ul {
 
 /* Hero Section */
 #hero {
-  background-color: #007bff;
+  background-color: #7c4dff; /* Violet */
   color: #fff;
   text-align: center;
   padding: 100px 0;
@@ -139,7 +176,7 @@ ul {
 
 .hero-buttons .btn {
   background-color: #fff;
-  color: #007bff;
+  color: #7c4dff; /* Violet */
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 1rem;
@@ -147,7 +184,7 @@ ul {
 }
 
 .hero-buttons .btn:hover {
-  background-color: #0056b3;
+  background-color: #651fff; /* Darker Violet */
   color: #fff;
 }
 
@@ -206,7 +243,7 @@ ul {
 }
 
 .experience-item {
-  background-color: #f9f9f9;
+  background-color: #fff;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -234,7 +271,7 @@ ul {
 }
 
 .expand-btn {
-  background-color: #007bff;
+  background-color: #7c4dff; /* Violet */
   color: #fff;
   border: none;
   padding: 10px 15px;
@@ -273,7 +310,7 @@ ul {
 }
 
 .project-item {
-  background-color: #f9f9f9;
+  background-color: #fff;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -407,7 +444,7 @@ ul {
 }
 
 .course-item a {
-  color: #007bff;
+  color: #7c4dff; /* Violet */
   text-decoration: underline;
 }
 
@@ -436,7 +473,7 @@ ul {
 }
 
 .contact-info a {
-  color: #007bff;
+  color: #7c4dff; /* Violet */
   text-decoration: none;
 }
 
@@ -469,5 +506,5 @@ footer p {
 }
 
 .social-links a:hover {
-  color: #007bff;
+  color: #7c4dff; /* Violet */
 }
