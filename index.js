@@ -2,7 +2,8 @@
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
+    const target = document.querySelector(this.getAttribute('href'));
+    target.scrollIntoView({
       behavior: 'smooth',
       block: 'start' // Scroll to the top of the section
     });
@@ -44,17 +45,19 @@ document.querySelectorAll('.expand-btn').forEach(button => {
 
 // Dark/Light mode toggle with localStorage persistence
 const toggleButton = document.createElement('button');
-toggleButton.textContent = 'Toggle Light Mode';
+toggleButton.textContent = '🌓'; // Default to dark mode icon
 toggleButton.style.position = 'fixed';
 toggleButton.style.bottom = '20px';
 toggleButton.style.right = '20px';
-toggleButton.style.padding = '10px';
+toggleButton.style.padding = '12px';
 toggleButton.style.backgroundColor = 'var(--primary-color)';
 toggleButton.style.color = 'var(--background-color)';
 toggleButton.style.border = 'none';
-toggleButton.style.borderRadius = '5px';
+toggleButton.style.borderRadius = '50%';
 toggleButton.style.cursor = 'pointer';
 toggleButton.style.zIndex = '1000';
+toggleButton.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.3)';
+toggleButton.style.transition = 'all 0.3s ease';
 
 document.body.appendChild(toggleButton);
 
@@ -62,16 +65,16 @@ document.body.appendChild(toggleButton);
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'light') {
   document.body.classList.add('light-mode');
-  toggleButton.textContent = 'Toggle Dark Mode';
+  toggleButton.textContent = '🌞'; // Light mode icon
 }
 
 toggleButton.addEventListener('click', () => {
   document.body.classList.toggle('light-mode');
   if (document.body.classList.contains('light-mode')) {
-    toggleButton.textContent = 'Toggle Dark Mode';
+    toggleButton.textContent = '🌞';
     localStorage.setItem('theme', 'light'); // Save theme preference
   } else {
-    toggleButton.textContent = 'Toggle Light Mode';
+    toggleButton.textContent = '🌓';
     localStorage.setItem('theme', 'dark'); // Save theme preference
   }
 });
@@ -122,9 +125,9 @@ document.querySelectorAll('.project-item').forEach(project => {
 const scrollToTopButton = document.createElement('button');
 scrollToTopButton.innerHTML = '&#8593;'; // Up arrow symbol
 scrollToTopButton.style.position = 'fixed';
-scrollToTopButton.style.bottom = '60px'; // Position above the dark/light mode button
+scrollToTopButton.style.bottom = '80px'; // Position above the dark/light mode button
 scrollToTopButton.style.right = '20px';
-scrollToTopButton.style.padding = '10px';
+scrollToTopButton.style.padding = '12px';
 scrollToTopButton.style.backgroundColor = 'var(--primary-color)';
 scrollToTopButton.style.color = 'var(--background-color)';
 scrollToTopButton.style.border = 'none';
@@ -132,6 +135,8 @@ scrollToTopButton.style.borderRadius = '50%';
 scrollToTopButton.style.cursor = 'pointer';
 scrollToTopButton.style.zIndex = '1000';
 scrollToTopButton.style.display = 'none'; // Hidden by default
+scrollToTopButton.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.3)';
+scrollToTopButton.style.transition = 'all 0.3s ease';
 
 document.body.appendChild(scrollToTopButton);
 
