@@ -238,30 +238,44 @@ h2::after {
   border-radius: 10px;
   box-shadow: var(--shadow);
   transition: var(--transition);
+  text-align: center;
 }
 
 .project-item:hover {
-  transform: scale(1.05);
+  transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
+.project-item img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
 .project-item h3 {
+  font-size: 1.4rem;
   color: var(--primary-color);
   margin: 0;
+}
+
+.project-item p {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin: 10px 0;
 }
 
 /* Skills */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
+  text-align: center;
 }
 
 .skill-item {
   background-color: var(--card-background);
   padding: 20px;
   border-radius: 10px;
-  text-align: center;
   box-shadow: var(--shadow);
   transition: var(--transition);
 }
@@ -271,28 +285,16 @@ h2::after {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
-.skill-item i {
-  font-size: 2.5rem;
-  color: var(--primary-color);
+.skill-item img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
 }
 
 .skill-item h3 {
-  margin: 10px 0;
-}
-
-/* Progress bars for skills */
-.progress-bar {
-  width: 100%;
-  height: 10px;
-  background-color: var(--background-color);
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.progress-fill {
-  height: 100%;
-  background-color: var(--primary-color);
-  transition: width 1s ease-in-out;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin: 0;
 }
 
 /* Education & Courses */
@@ -383,11 +385,12 @@ footer p {
   background-color: var(--primary-color);
   color: var(--background-color);
   border: none;
-  padding: 10px;
+  padding: 12px;
   border-radius: 50%;
   cursor: pointer;
   box-shadow: var(--shadow);
   transition: var(--transition);
+  z-index: 1000;
 }
 
 .theme-toggle:hover {
