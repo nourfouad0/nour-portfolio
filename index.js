@@ -64,7 +64,7 @@ const lightModeStyles = `
   .light-mode .project-item,
   .light-mode .skill-item,
   .light-mode .education-item,
-  .light-mode .certification-item {
+  .light-mode .course-item {
     background-color: var(--card-background);
     color: var(--text-color);
   }
