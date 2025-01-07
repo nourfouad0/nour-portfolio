@@ -1,4 +1,4 @@
-// Smooth Scrolling for Navigation Links
+// Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -8,17 +8,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Add animations on scroll
-const sections = document.querySelectorAll('section');
+// Mobile menu toggle
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.querySelector('.nav-links');
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.1 });
-
-sections.forEach(section => {
-  observer.observe(section);
+mobileMenu.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
 });
+
+// Optional: Add a dark/light mode toggle
+const toggleButton = document.createElement('button');
+toggleButton.textContent = 'Toggle Light Mode';
+toggleButton.style.position = 'fixed';
+toggleButton.style.bottom = '20px';
+toggleButton.style.right = '20px';
+toggleButton.style.padding = '10px';
+toggleButton.style.backgroundColor = 'var(--primary-color)';
+toggleButton.style.color = 'var(--background-color)';
+toggleButton.style.border = 'none';
+toggleButton.style.borderRadius = '5px';
+toggleButton.style.cursor = 'pointer';
+
+document.body.appendChild(toggleButton);
+
+toggleButton.addEventListener('click', () => {
+  document.body
