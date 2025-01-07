@@ -69,7 +69,7 @@ a:hover {
 #hero {
   background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
   color: white;
-  padding: 100px 0;
+  padding: 80px 0;
   text-align: center;
 }
 
@@ -107,13 +107,13 @@ a:hover {
 
 /* Sections */
 section {
-  padding: 60px 0;
+  padding: 40px 0; /* Reduced padding for less gaps */
 }
 
 h2 {
   font-size: 2rem;
   color: var(--primary-color);
-  margin-bottom: 30px;
+  margin-bottom: 20px; /* Reduced margin */
   text-align: center;
 }
 
@@ -186,17 +186,26 @@ h2 {
   margin: 10px 0;
 }
 
-/* Education & Certifications */
-.education-item, .certification-item {
+/* Education & Courses */
+.education-item, .course-item {
   background-color: var(--card-background);
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
 }
 
-.education-item h3, .certification-item h3 {
+.education-item h3, .course-item h3 {
   color: var(--primary-color);
   margin: 0;
+}
+
+.course-item a {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.course-item a:hover {
+  color: var(--hover-color);
 }
 
 /* Contact */
