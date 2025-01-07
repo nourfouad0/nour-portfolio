@@ -188,6 +188,17 @@ h2::after {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
+.experience-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.experience-logo {
+  width: 60px;
+  height: 60px;
+}
+
 .experience-item h3 {
   color: var(--primary-color);
   margin: 0;
@@ -246,7 +257,7 @@ h2::after {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
-.project-item img {
+.project-logo {
   width: 80px;
   height: 80px;
   margin-bottom: 15px;
@@ -297,8 +308,8 @@ h2::after {
   margin: 0;
 }
 
-/* Education & Courses */
-.education-item, .course-item {
+/* Education */
+.education-item {
   background-color: var(--card-background);
   padding: 20px;
   border-radius: 10px;
@@ -307,23 +318,62 @@ h2::after {
   transition: var(--transition);
 }
 
-.education-item:hover, .course-item:hover {
+.education-item:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
-.education-item h3, .course-item h3 {
+.education-logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.education-item h3 {
   color: var(--primary-color);
   margin: 0;
 }
 
-.course-item a {
-  color: var(--primary-color);
-  font-weight: 500;
+.education-item h4 {
+  color: var(--text-color);
+  margin: 10px 0;
 }
 
-.course-item a:hover {
-  color: var(--hover-color);
+/* Courses */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.course-item {
+  background-color: var(--card-background);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  text-align: center;
+}
+
+.course-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.course-item img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.course-item h3 {
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.course-item p {
+  color: var(--text-color);
+  margin: 10px 0;
 }
 
 /* Contact */
@@ -462,7 +512,7 @@ footer p {
     font-size: 2rem;
   }
 
-  .experience-grid, .project-grid, .skills-grid {
+  .experience-grid, .project-grid, .skills-grid, .courses-grid {
     grid-template-columns: 1fr;
   }
 }
