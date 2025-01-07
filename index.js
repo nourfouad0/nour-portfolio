@@ -118,13 +118,89 @@ document.querySelectorAll('.project-item').forEach(project => {
   });
 });
 
-// Dynamic loading spinner (optional)
-window.addEventListener('load', () => {
-  const spinner = document.createElement('div');
-  spinner.className = 'loading-spinner';
-  document.body.appendChild(spinner);
+// Scroll-to-top button
+const scrollToTopButton = document.createElement('button');
+scrollToTopButton.innerHTML = '&#8593;'; // Up arrow symbol
+scrollToTopButton.style.position = 'fixed';
+scrollToTopButton.style.bottom = '60px'; // Position above the dark/light mode button
+scrollToTopButton.style.right = '20px';
+scrollToTopButton.style.padding = '10px';
+scrollToTopButton.style.backgroundColor = 'var(--primary-color)';
+scrollToTopButton.style.color = 'var(--background-color)';
+scrollToTopButton.style.border = 'none';
+scrollToTopButton.style.borderRadius = '50%';
+scrollToTopButton.style.cursor = 'pointer';
+scrollToTopButton.style.zIndex = '1000';
+scrollToTopButton.style.display = 'none'; // Hidden by default
 
+document.body.appendChild(scrollToTopButton);
+
+// Show/hide scroll-to-top button based on scroll position
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    scrollToTopButton.style.display = 'block';
+  } else {
+    scrollToTopButton.style.display = 'none';
+  }
+});
+
+// Scroll to top when the button is clicked
+scrollToTopButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+// Typewriter effect for the hero section
+const heroText = document.querySelector('#hero h1');
+const originalText = heroText.textContent;
+let charIndex = 0;
+
+const typeWriter = () => {
+  if (charIndex < originalText.length) {
+    heroText.textContent = originalText.substring(0, charIndex + 1);
+    charIndex++;
+    setTimeout(typeWriter, 100); // Adjust typing speed here
+  }
+};
+
+// Start the typewriter effect after the page loads
+window.addEventListener('load', () => {
+  heroText.textContent = ''; // Clear the text initially
+  typeWriter();
+});
+
+// Animated progress bars for skills
+const skills = [
+  { name: 'Networking', level: 90 },
+  { name: 'Security', level: 85 },
+  { name: 'Automation', level: 80 }
+];
+
+const skillsContainer = document.querySelector('.skills-grid');
+
+skills.forEach(skill => {
+  const skillItem = document.createElement('div');
+  skillItem.classList.add('skill-item');
+
+  const skillName = document.createElement('h3');
+  skillName.textContent = skill.name;
+
+  const progressBar = document.createElement('div');
+  progressBar.classList.add('progress-bar');
+
+  const progressFill = document.createElement('div');
+  progressFill.classList.add('progress-fill');
+  progressFill.style.width = '0'; // Start at 0%
+
+  progressBar.appendChild(progressFill);
+  skillItem.appendChild(skillName);
+  skillItem.appendChild(progressBar);
+  skillsContainer.appendChild(skillItem);
+
+  // Animate the progress bar
   setTimeout(() => {
-    spinner.remove();
-  }, 1000); // Simulate loading delay
+    progressFill.style.width = `${skill.level}%`;
+  }, 500); // Delay the animation for better visual effect
 });
