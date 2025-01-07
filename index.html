@@ -66,8 +66,13 @@
       <h2>Experience</h2>
       <div class="experience-grid">
         <div class="experience-item">
-          <h3>Telecommunication Data Communication Engineer</h3>
-          <h4>Xceed Contact Center</h4>
+          <div class="experience-header">
+            <img src="https://img.icons8.com/color/96/000000/cisco.png" alt="Cisco Logo" class="experience-logo">
+            <div>
+              <h3>Telecommunication Data Communication Engineer</h3>
+              <h4>Xceed Contact Center</h4>
+            </div>
+          </div>
           <button class="expand-btn">View Tasks</button>
           <ul class="task-list">
             <li>Interact to solve problems escalated by the level one technical team.</li>
@@ -84,8 +89,13 @@
           </ul>
         </div>
         <div class="experience-item">
-          <h3>Telecommunication Support Engineer</h3>
-          <h4>Xceed Contact Center</h4>
+          <div class="experience-header">
+            <img src="https://img.icons8.com/color/96/000000/voip.png" alt="VoIP Logo" class="experience-logo">
+            <div>
+              <h3>Telecommunication Support Engineer</h3>
+              <h4>Xceed Contact Center</h4>
+            </div>
+          </div>
           <button class="expand-btn">View Tasks</button>
           <ul class="task-list">
             <li>Provided 24/7 VoIP and network support for Telecommunication Systems Software and hardware.</li>
@@ -107,14 +117,37 @@
   <section id="projects">
     <div class="container">
       <h2>Projects</h2>
-      <div class="filter-buttons">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="networking">Networking</button>
-        <button class="filter-btn" data-filter="security">Security</button>
-        <button class="filter-btn" data-filter="automation">Automation</button>
-      </div>
       <div class="project-grid">
-        <!-- Projects will be dynamically added here by JavaScript -->
+        <div class="project-item">
+          <img src="https://img.icons8.com/color/96/000000/cisco.png" alt="Cisco Logo" class="project-logo">
+          <h3>ASA 5520 Failure and Replacement</h3>
+          <p>Diagnosed and replaced a failed Cisco ASA 5520, restoring full functionality.</p>
+        </div>
+        <div class="project-item">
+          <img src="https://img.icons8.com/color/96/000000/firewall.png" alt="Firewall Logo" class="project-logo">
+          <h3>Firewall Migration: Cisco ASA to Cisco Firepower</h3>
+          <p>Led the migration of network security infrastructure from Cisco ASA to Cisco Firepower, ensuring seamless functionality and improved security.</p>
+        </div>
+        <div class="project-item">
+          <img src="https://img.icons8.com/color/96/000000/load-balancer.png" alt="Load Balancer Logo" class="project-logo">
+          <h3>Load Balancer and WAF Migration: KEMP to F5 LTM and ASM</h3>
+          <p>Executed the migration of load balancer and web application firewall services from KEMP to F5 LTM and ASM, optimizing performance and security.</p>
+        </div>
+        <div class="project-item">
+          <img src="https://img.icons8.com/color/96/000000/router.png" alt="Router Logo" class="project-logo">
+          <h3>Router Migration: Cisco C3900 to Cisco C8300</h3>
+          <p>Managed the transition from legacy Cisco C3900 routers to Cisco C8300 series, enhancing network speed and reliability.</p>
+        </div>
+        <div class="project-item">
+          <img src="https://img.icons8.com/color/96/000000/switch.png" alt="Switch Logo" class="project-logo">
+          <h3>Juniper Switches Upgrade for PCI Compliance</h3>
+          <p>Upgraded Juniper switches with special configurations to meet PCI compliance and mitigate known vulnerabilities.</p>
+        </div>
+        <div class="project-item">
+          <img src="https://img.icons8.com/color/96/000000/automation.png" alt="Automation Logo" class="project-logo">
+          <h3>Network Automation</h3>
+          <p>Automated the backups of F5, Fortiproxy, PaloAlto, Juniper, and Cisco switches, routers, and firewalls using Python's Netmiko library.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -124,17 +157,21 @@
     <div class="container">
       <h2>Skills</h2>
       <div class="skills-grid">
-        <!-- Skills will be dynamically added here by JavaScript -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Stats -->
-  <section id="stats">
-    <div class="container">
-      <h2>Stats</h2>
-      <div class="stats-grid">
-        <!-- Stats will be dynamically added here by JavaScript -->
+        <div class="skill-item">
+          <img src="https://img.icons8.com/color/96/000000/networking.png" alt="Networking Logo">
+          <h3>Networking</h3>
+          <p>Cisco, Juniper, Routing, Switching, VLANs, VPN</p>
+        </div>
+        <div class="skill-item">
+          <img src="https://img.icons8.com/color/96/000000/security-checked.png" alt="Security Logo">
+          <h3>Security</h3>
+          <p>Firewalls (Cisco ASA, Palo Alto), IPS, Network Security</p>
+        </div>
+        <div class="skill-item">
+          <img src="https://img.icons8.com/color/96/000000/automation.png" alt="Automation Logo">
+          <h3>Automation</h3>
+          <p>Python, Network Automation, Scripting</p>
+        </div>
       </div>
     </div>
   </section>
@@ -144,6 +181,7 @@
     <div class="container">
       <h2>Education</h2>
       <div class="education-item">
+        <img src="https://img.icons8.com/color/96/000000/university.png" alt="University Logo" class="education-logo">
         <h3>Ain Shams University</h3>
         <h4>Bachelor's Degree in Electrical, Electronics and Communication</h4>
         <p>GPA: 2.62 | Sep 2018 - July 2023</p>
@@ -157,31 +195,38 @@
       <h2>Courses</h2>
       <div class="courses-grid">
         <div class="course-item">
+          <img src="https://img.icons8.com/color/96/000000/cisco.png" alt="Cisco Logo">
           <h3>CCNA</h3>
           <p>Certified Cisco Network Associate</p>
           <a href="https://drive.google.com/file/d/1F-Nc5PTKB-igzdjT4PMEqwQ-N3Gh4mf-/view?usp=drive_link" target="_blank">View Certificate</a>
         </div>
         <div class="course-item">
+          <img src="https://img.icons8.com/color/96/000000/cisco.png" alt="Cisco Logo">
           <h3>CCNP ENARSI</h3>
           <p>Implementing Cisco Enterprise Advanced Routing and Services</p>
         </div>
         <div class="course-item">
+          <img src="https://img.icons8.com/color/96/000000/cisco.png" alt="Cisco Logo">
           <h3>CCNP ENCOR</h3>
           <p>Implementing and Operating Cisco Enterprise Network Core Technologies</p>
         </div>
         <div class="course-item">
+          <img src="https://img.icons8.com/color/96/000000/firewall.png" alt="Firewall Logo">
           <h3>Cisco ASA</h3>
           <p>Cisco Adaptive Security Appliance</p>
         </div>
         <div class="course-item">
+          <img src="https://img.icons8.com/color/96/000000/security-checked.png" alt="Security Logo">
           <h3>Palo Alto</h3>
           <p>Palo Alto Networks Certified Network Security Engineer</p>
         </div>
         <div class="course-item">
+          <img src="https://img.icons8.com/color/96/000000/load-balancer.png" alt="Load Balancer Logo">
           <h3>F5 LTM</h3>
           <p>F5 Certified BIG-IP Administrator</p>
         </div>
         <div class="course-item">
+          <img src="https://img.icons8.com/color/96/000000/web-application-firewall.png" alt="WAF Logo">
           <h3>F5 WAF</h3>
           <p>F5 Certified Web Application Firewall Specialist</p>
         </div>
