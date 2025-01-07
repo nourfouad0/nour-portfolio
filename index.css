@@ -30,7 +30,7 @@ a:hover {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px; /* Reduced container padding */
 }
 
 /* Navigation Bar */
@@ -51,7 +51,7 @@ a:hover {
 #navbar .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 15px; /* Reduced gap */
   margin: 0;
   padding: 0;
 }
@@ -69,35 +69,35 @@ a:hover {
 #hero {
   background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
   color: white;
-  padding: 80px 0;
+  padding: 40px 0; /* Reduced padding */
   text-align: center;
 }
 
 #hero h1 {
-  font-size: 3rem;
+  font-size: 2.5rem; /* Slightly smaller font */
   margin: 0;
 }
 
 #hero h2 {
-  font-size: 2rem;
-  margin: 10px 0;
+  font-size: 1.8rem; /* Slightly smaller font */
+  margin: 8px 0; /* Reduced margin */
 }
 
 #hero p {
-  font-size: 1.2rem;
-  margin: 10px 0;
+  font-size: 1.1rem; /* Slightly smaller font */
+  margin: 8px 0; /* Reduced margin */
 }
 
 .hero-buttons {
-  margin-top: 20px;
+  margin-top: 15px; /* Reduced margin */
 }
 
 .hero-buttons .btn {
   background-color: var(--primary-color);
   color: var(--background-color);
-  padding: 10px 20px;
+  padding: 8px 16px; /* Reduced padding */
   border-radius: 5px;
-  margin: 0 10px;
+  margin: 0 8px; /* Reduced margin */
   font-weight: 600;
 }
 
@@ -107,13 +107,13 @@ a:hover {
 
 /* Sections */
 section {
-  padding: 40px 0; /* Reduced padding for less gaps */
+  padding: 20px 0; /* Reduced padding */
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.8rem; /* Slightly smaller font */
   color: var(--primary-color);
-  margin-bottom: 20px; /* Reduced margin */
+  margin-bottom: 15px; /* Reduced margin */
   text-align: center;
 }
 
@@ -121,12 +121,12 @@ h2 {
 .experience-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 15px; /* Reduced gap */
 }
 
 .experience-item {
   background-color: var(--card-background);
-  padding: 20px;
+  padding: 15px; /* Reduced padding */
   border-radius: 10px;
 }
 
@@ -137,24 +137,43 @@ h2 {
 
 .experience-item h4 {
   color: var(--text-color);
-  margin: 10px 0;
+  margin: 8px 0; /* Reduced margin */
 }
 
-.experience-item ul {
+.experience-item .expand-btn {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  padding: 6px 12px; /* Reduced padding */
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 8px; /* Reduced margin */
+}
+
+.experience-item .expand-btn:hover {
+  background-color: var(--hover-color);
+}
+
+.experience-item .task-list {
   list-style-type: disc;
   padding-left: 20px;
+  display: none; /* Hidden by default */
+}
+
+.experience-item .task-list.show {
+  display: block; /* Show when expanded */
 }
 
 /* Projects */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 15px; /* Reduced gap */
 }
 
 .project-item {
   background-color: var(--card-background);
-  padding: 20px;
+  padding: 15px; /* Reduced padding */
   border-radius: 10px;
 }
 
@@ -167,12 +186,12 @@ h2 {
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  gap: 15px; /* Reduced gap */
 }
 
 .skill-item {
   background-color: var(--card-background);
-  padding: 20px;
+  padding: 15px; /* Reduced padding */
   border-radius: 10px;
   text-align: center;
 }
@@ -183,15 +202,15 @@ h2 {
 }
 
 .skill-item h3 {
-  margin: 10px 0;
+  margin: 8px 0; /* Reduced margin */
 }
 
 /* Education & Courses */
 .education-item, .course-item {
   background-color: var(--card-background);
-  padding: 20px;
+  padding: 15px; /* Reduced padding */
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 15px; /* Reduced margin */
 }
 
 .education-item h3, .course-item h3 {
@@ -214,21 +233,56 @@ h2 {
 }
 
 .contact-info p {
-  margin: 10px 0;
+  margin: 8px 0; /* Reduced margin */
 }
 
 .contact-info i {
-  margin-right: 10px;
+  margin-right: 8px; /* Reduced margin */
   color: var(--primary-color);
 }
 
 /* Footer */
 footer {
   background-color: var(--card-background);
-  padding: 20px 0;
+  padding: 15px 0; /* Reduced padding */
   text-align: center;
 }
 
 footer p {
   margin: 0;
+}
+
+/* Light Mode Styles */
+.light-mode {
+  --background-color: #ffffff;
+  --text-color: #1a1a1a;
+  --card-background: #f0f0f0;
+  --primary-color: #6200ee;
+  --secondary-color: #3700b3;
+  --hover-color: #bb86fc;
+}
+
+.light-mode #navbar {
+  background-color: var(--card-background);
+}
+
+.light-mode #navbar .nav-links li a {
+  color: var(--text-color);
+}
+
+.light-mode #navbar .nav-links li a:hover {
+  color: var(--primary-color);
+}
+
+.light-mode .experience-item,
+.light-mode .project-item,
+.light-mode .skill-item,
+.light-mode .education-item,
+.light-mode .course-item {
+  background-color: var(--card-background);
+  color: var(--text-color);
+}
+
+.light-mode footer {
+  background-color: var(--card-background);
 }
